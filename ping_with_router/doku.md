@@ -130,9 +130,70 @@ ip address add address=192.168.2.1/24 interface=ether2
 
 ![grafik](https://user-images.githubusercontent.com/102586033/172247329-0ca0fc17-87a6-4fa5-95bb-b02ff97e8d26.png)
 
+Konfiguration Speichern (Backup):
+
+![grafik](https://user-images.githubusercontent.com/102586033/172248319-35268437-7c0c-438b-b01e-816d2966bb72.png)
+
+
+_____________________________
+Statische IPV4 bei PC1 und PC2, PC3 festlegen:
+
+Statische IP festlagen Usage: 
+
+Ip subnetmask gateway
+
+ip dns 192.168.x.1
+
+PC 1:
+
+ip 192.168.1.2 255.255.255.0 192.168.1.1
+
+ip dns 192.168.1.1
+
+show ip
+
+![grafik](https://user-images.githubusercontent.com/102586033/172248992-b5c5ecf6-1a47-4dde-9b31-22ef6f694bd2.png)
+
+
+PC 2:
+
+ip 192.168.2.2 255.255.255.0 192.168.2.1
+
+ip dns 192.168.2.1
+
+show ip
+
+![grafik](https://user-images.githubusercontent.com/102586033/172249180-d9add707-1031-4713-b447-ad76cd4b77c7.png)
 
 
 
+PC 3:
+
+ip 192.168.2.3 255.255.255.0 192.168.2.1
+
+ip dns 192.168.2.1
+
+show ip
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/172249328-816e5b29-ce26-4f18-8106-6b03e26fd568.png)
+
+
+Config Save:
+
+![grafik](https://user-images.githubusercontent.com/102586033/172249668-04f0b423-be46-4b10-941e-0d094d82a7f4.png)
+
+
+______________________
+
+Pingen
+
+
+Alle PC können sich gegenseitig pingen
+
+
+
+![ip](https://user-images.githubusercontent.com/102586033/172250923-db3a10f1-60a3-46e7-a566-d7ad20884a4c.jpg)
 
 
 
