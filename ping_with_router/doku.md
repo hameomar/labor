@@ -134,6 +134,12 @@ Konfiguration Speichern (Backup):
 
 ![grafik](https://user-images.githubusercontent.com/102586033/172248319-35268437-7c0c-438b-b01e-816d2966bb72.png)
 
+/ip route 
+
+print
+
+![grafik](https://user-images.githubusercontent.com/102586033/172253138-19461980-7644-4332-8a27-04112480de47.png)
+
 
 _____________________________
 Statische IPV4 bei PC1 und PC2, PC3 festlegen:
