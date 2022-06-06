@@ -50,3 +50,37 @@ Alle Subnetze sind klar vermerkt und Abgrenzungen grafisch erkennbar
 
 
 
+IPv4 Subnetz A ist wie folgt bie mir festgelegt:
+
+Position in Klassenliste: 18
+
+192.168.X.0/24
+X = 10 + Position in Klassenliste
+
+192.168.28.0/24
+
+Network ID : 192.168.28.0
+Subnetmask: /24 
+Gateway: 192.168.28.1
+Host Range : 192.168.28.2 - 192.168.28.254
+Broadcast : 192.168.28.255
+
+
+
+
+IPv4 Subnetz B wird wie Netz A bei mir festgelegt:
+
+Position in Klassenliste:18
+ 
+X = 20 + Position in Klassenliste
+
+192.168.38.0/24
+
+
+Network ID : 192.168.38.0
+Subnetmask: /24 
+Gateway: 192.168.38.1
+Host Range : 192.168.38.2 - 192.168.38.254
+Broadcast : 192.168.38.255
+
+
