@@ -25,12 +25,16 @@ Bsp. X = 10 + 1 => 11 => 192.168.11.0/24
 IPv4 Subnetz B wird wie Netz A festgelegt
 
 X = 11 + Position in Klassenliste
+
 Bsp. X = 20 + 1 => 21 => 192.168.21.0/24
 
 
 PC2 kann PC1 anpingen und umgekehrt
+
 PC1 und PC2 sind vom eigenen Laptop/PC anpingbar.
+
 Netz C hat eine Maske /30
+
 Alle Subnetze sind klar vermerkt und Abgrenzungen grafisch erkennbar
 
 
@@ -49,22 +53,27 @@ Alle Subnetze sind klar vermerkt und Abgrenzungen grafisch erkennbar
 
 
 
-
+_____________________________
 IPv4 Subnetz A ist wie folgt bie mir festgelegt:
 
 Position in Klassenliste: 18
 
 192.168.X.0/24
+
 X = 10 + Position in Klassenliste
 
 192.168.28.0/24
 
 Network ID : 192.168.28.0
-Subnetmask: /24 
-Gateway: 192.168.28.1
-Host Range : 192.168.28.2 - 192.168.28.254
-Broadcast : 192.168.28.255
 
+Subnetmask: /24 
+
+Gateway: 192.168.28.1
+
+Host Range : 192.168.28.2 - 192.168.28.254
+
+Broadcast : 192.168.28.255
+_______________________________
 
 
 
@@ -78,9 +87,36 @@ X = 20 + Position in Klassenliste
 
 
 Network ID : 192.168.38.0
+
 Subnetmask: /24 
+
 Gateway: 192.168.38.1
+
 Host Range : 192.168.38.2 - 192.168.38.254
+
 Broadcast : 192.168.38.255
+
+___________________________________
+
+IPv4 Subnetz C wird wie Netz A bei mir festgelegt:
+
+*Es muss eine /30 Subnet Maske haben.
+
+192.168.255.0/30
+
+Network Address:	192.168.255.0
+
+Host Range:	192.168.255.1 - 192.168.255.2
+
+Broadcast Addresse :	192.168.255.3
+
+Total Number of Hosts:	4
+
+Number of Usable Hosts:	2
+
+Subnet Mask:	255.255.255.252
+
+_______________________________
+
 
 
