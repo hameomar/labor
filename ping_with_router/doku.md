@@ -80,3 +80,36 @@ ein neues PW festlegen:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/172236761-b3214dbb-83b9-4083-9dee-c43443cdb366.png)
 
+System identity:
+
+Die Systemidentität ist ein eindeutiger Name, mit dem sich das System gegenüber anderen Routern im Netz identifiziert.
+
+![grafik](https://user-images.githubusercontent.com/102586033/172237801-cffdb791-13a1-48f0-a6a9-0317e591d345.png)
+
+
+Mit diesem Befehl kann ich einen neuen Name für Router festlegen:
+
+system identity set name=R1 
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/172239004-d8448faf-7895-4780-bf83-9d6960801e8e.png)
+
+
+____________________
+
+Diagramm zeichnen und einen Interface eine IPv4-Adresse zuordnen:
+
+
+![zecihnen](https://user-images.githubusercontent.com/102586033/172239971-e21d5f19-4b73-4e05-bdac-9a8b5359f6a0.jpg)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/172241883-19dd0356-7cdf-490c-a689-d4575510b9fb.png)
+
+
+
+Gundlage von Befehlen:
+
+
+
+
+
