@@ -80,9 +80,3 @@ ein neues PW festlegen:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/172236761-b3214dbb-83b9-4083-9dee-c43443cdb366.png)
 
-
-
-
-
-
-
