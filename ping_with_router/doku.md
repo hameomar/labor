@@ -107,7 +107,30 @@ Diagramm zeichnen und einen Interface eine IPv4-Adresse zuordnen:
 
 
 
-Gundlage von Befehlen:
+ipv4 für Router Interfaces festlegen:
+
+
+Netzwerk Links: Der Interface ether1  bekommt die erste IP Adresse in diesem Netzwerk:
+
+192.168.1.1/24
+
+Befehl :
+
+ip address add address=192.168.1.1/24 interface=ether1
+
+![grafik](https://user-images.githubusercontent.com/102586033/172247122-0bffc3c1-a642-4aea-9fea-58733f58679e.png)
+
+
+
+Netzwerk Recht: Der Interface ether2  bekommt die erste IP Adresse in diesem Netzwerk:
+
+192.168.2.1/24
+
+ip address add address=192.168.2.1/24 interface=ether2
+
+![grafik](https://user-images.githubusercontent.com/102586033/172247329-0ca0fc17-87a6-4fa5-95bb-b02ff97e8d26.png)
+
+
 
 
 
