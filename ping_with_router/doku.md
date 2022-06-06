@@ -203,3 +203,14 @@ Alle PC können sich gegenseitig pingen
 
 
 
+____________________
+
+![grafik](https://user-images.githubusercontent.com/102586033/172253597-bf7ef5a5-a624-45f8-8da8-06b7da5079fc.png)
+
+
+
+Datei:
+
+[ping_mit_router.zip](https://github.com/hameomar/labor/files/8848117/ping_mit_router.zip)
+
+
