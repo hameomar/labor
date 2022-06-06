@@ -118,5 +118,22 @@ Subnet Mask:	255.255.255.252
 
 _______________________________
 
+Router konfigurieren:
+
+en
+
+config t
+
+init interface-name
+
+ip add 192.168.x.0 255.255.255.0
+
+no shut
+
+end
+
+show ip int brief
+
+
 
 
