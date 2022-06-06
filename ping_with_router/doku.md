@@ -1,144 +1,87 @@
 ping mit Router
 
 Aufgabe Link:
+
 https://gitlab.com/ch-tbz-it/Stud/m129/-/tree/main/07_GNS3_Labore#2-labor-2-ping-mit-router
-
-Anforderungen:
-
-Zwei unterschiedliche /24 Subnetze.
-
-Router hat jeweils erste IPv4-Adresse.
-
-PC1, PC2 und PC3 haben jeweils eine statische IPv4-Adresse.
-
-Alle PCs können sich gegenseitig anpingen.
 
 Anforderungen
 
-IPv4 Subnetz A ist wie folgt festgelegt:
+Zwei unterschiedliche /24 Subnetze
 
-192.168.X.0/24
-X = 10 + Position in Klassenliste
-Bsp. X = 10 + 1 => 11 => 192.168.11.0/24
+Router hat jeweils erste IPv4-Adresse
 
+PC1, PC2 und PC3 haben jeweils eine statische IPv4-Adresse
 
-IPv4 Subnetz B wird wie Netz A festgelegt
+Alle PCs können sich gegenseitig anpingen
 
-X = 11 + Position in Klassenliste
+![grafik](https://user-images.githubusercontent.com/102586033/172234043-75fb0a31-1121-4310-b08f-16f18f5b0a32.png)
 
-Bsp. X = 20 + 1 => 21 => 192.168.21.0/24
+_______________________
 
+Die zwei unetrschiedlich Subnetze:
 
-PC2 kann PC1 anpingen und umgekehrt
+Netzwerk Links:
 
-PC1 und PC2 sind vom eigenen Laptop/PC anpingbar.
+192.168.1.0/24
 
-Netz C hat eine Maske /30
 
-Alle Subnetze sind klar vermerkt und Abgrenzungen grafisch erkennbar
+Netzwerkadresse:	192.168.1.0
 
+Gateway: 192.168.1.1
 
+Verwendbarer Host-IP-Bereich:	192.168.1.1 - 192.168.1.254
 
+Broadcast-Adresse:	192.168.1.255
 
-![grafik](https://user-images.githubusercontent.com/102586033/172202398-2f46672c-6e5c-4397-b396-7118c7d695ba.png)
+Gesamtzahl der Hosts:	256
 
+Anzahl der nutzbaren Hosts:	254
 
+Subnetmask: 255.255.255.0
+__________________________
 
+Netzwerk Recht:
 
-![grafik](https://user-images.githubusercontent.com/102586033/172212957-d41289e8-3944-4665-ad43-17ceb9939dbc.png)
+192.168.2.0/24
 
 
-![grafik](https://user-images.githubusercontent.com/102586033/172215294-3564f369-2bb8-4e29-ae62-e9414875ca72.png)
+Netzwerkadresse:	192.168.2.0
 
+Gateway: 192.168.2.1
 
+Verwendbarer Host-IP-Bereich:	192.168.2.1 - 192.168.2.254
 
+Broadcast-Adresse:	192.168.2.255
 
-_____________________________
-IPv4 Subnetz A ist wie folgt bie mir festgelegt:
+Gesamtzahl der Hosts:	256
 
-Position in Klassenliste: 18
+Anzahl der nutzbaren Hosts:	254
 
-192.168.X.0/24
+Subnetmask: 255.255.255.0
 
-X = 10 + Position in Klassenliste
+::::::::::::::::::::::::::::::::::::::::::::::
 
-192.168.28.0/24
+Grundlegende Bedienung eines MikroTik Routers:
 
-Network ID : 192.168.28.0
+![grafik](https://user-images.githubusercontent.com/102586033/172236300-4a1e6a1e-c1b4-41c1-9aaa-57ad7fc18c1e.png)
 
-Subnetmask: /24 
 
-Gateway: 192.168.28.1
+Enter drucken
 
-Host Range : 192.168.28.2 - 192.168.28.254
+![grafik](https://user-images.githubusercontent.com/102586033/172236370-607b056f-b533-4a1e-b4a6-8434733c0a07.png)
 
-Broadcast : 192.168.28.255
-_______________________________
 
+![grafik](https://user-images.githubusercontent.com/102586033/172236418-2b65b534-61a3-4459-ad47-2caae821df85.png)
 
+ein neues PW festlegen:
 
-IPv4 Subnetz B wird wie Netz A bei mir festgelegt:
+![grafik](https://user-images.githubusercontent.com/102586033/172236668-a628bbbb-143d-4563-a425-522599ec2d4a.png)
 
-Position in Klassenliste:18
- 
-X = 20 + Position in Klassenliste
 
-192.168.38.0/24
+![grafik](https://user-images.githubusercontent.com/102586033/172236761-b3214dbb-83b9-4083-9dee-c43443cdb366.png)
 
 
-Network ID : 192.168.38.0
 
-Subnetmask: /24 
-
-Gateway: 192.168.38.1
-
-Host Range : 192.168.38.2 - 192.168.38.254
-
-Broadcast : 192.168.38.255
-
-___________________________________
-
-IPv4 Subnetz C wird wie Netz A bei mir festgelegt:
-
-*Es muss eine /30 Subnet Maske haben.
-
-192.168.255.0/30
-
-Network Address:	192.168.255.0
-
-Host Range:	192.168.255.1 - 192.168.255.2
-
-Broadcast Addresse :	192.168.255.3
-
-Total Number of Hosts:	4
-
-Number of Usable Hosts:	2
-
-Subnet Mask:	255.255.255.252
-
-_______________________________
-
-Router konfigurieren:
-
-en
-
-config t
-
-init interface-name
-
-ip add 192.168.x.1 255.255.255.0
-
-no shut
-
-end
-
-show ip int brief
-
-show ip route
-
-conf t
-
-ip route (ip of ziel Netwerk 192.168.x.0) 255.255.255.0  (ip of next hop zum Ziel Netzwerk)
 
 
 
