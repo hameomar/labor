@@ -6,22 +6,37 @@ https://gitlab.com/ch-tbz-it/Stud/m129/-/tree/main/07_GNS3_Labore#1-labor-1-ping
 Anforderungen
 
 PC1,PC2 und PC3 haben je eine statische IPv4-Adresse.
+
 Alle PCs können sich gegenseitig anpingen.
+
 Verwendetes Subnetz ist vermerkt.
+
 Wireshark Packet Traces wurden durchgeführt (und sind dokumentiert!).
+
 __________________________________________
 
 Switch 
 
+
 Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk miteinander verbindet. In einem Ethernet-Netzwerk, das auf der Sterntopologie basiert, dient ein Switch als Verteiler für die Datenpakete. 
  
 Layer 2 Switch vs Layer 3 
+
 Der Unterschied zwischen einem Layer-2-Switch und einem Layer-3-Switch ist die Routing-Funktion. Ein Layer-2-Switch arbeitet nur mit MAC-Adressen.Ein Layer-3-Switch hingegen kann auch statisches Routing und dynamisches Routing durchführen, einschliesslich IP- und VLAN-Kommunikation (Virtual Local Area Network). 
  
-Layer2 Switch 	Layer 3 Switch 
-Dieser Switch arbeitet auf Layer 2 	Arbeitet auf Layer 3 
-Arbeitet mit MAC Adressen 	Verwendet IPs und kann die Aufgabe eines Switches übernehmen  
- 
+Layer2 Switch: 	
+
+Dieser Switch arbeitet auf Layer 2 	
+
+Arbeitet mit MAC Adressen
+
+
+Layer 3 Switch:
+
+Arbeitet auf Layer 3 
+
+Verwendet IPs und kann die Aufgabe eines Switches übernehmen  
+ ______________________________
  
 Ping mit Switch via GNS3 
  
@@ -29,6 +44,7 @@ GNS3 wird von Netzwerkadministratoren verwendet, um virtuelle und reale Netzwerk
 Mit Drag und Drop Funktionen kann man Geräten zu einem Workspace einfügen und konfigurieren, testen. 
  
 Wir werden uns mit einem Remote Server verbinden, damit wir unsere Topologie zeichnen und testen können. Der Vorteil ist, dass man kein extra VMs für GNS3 braucht. 
+
  
  ![grafik](https://user-images.githubusercontent.com/102586033/172190626-5c5bc56a-26dc-41d4-a895-a2869875088c.png)
 
@@ -44,23 +60,33 @@ Ein Swicht verfügt über Interfaces und diese werden für "Geräte-Einschließe
 Nein. Auf Schicht 2 ist es nicht möglich, einen Rahmen an ein anderes Gerät zu senden und eine Antwort zu erwarten.
 
 Auswahl eines Netzwerk: 
+
 Wir haben bei diesem Labor 3 Geräten zu verbinden.
 Das heisst wir brauchen 3 Bits. Mit 3 Bits bekommen wir 8 Adressen: 
+
 IP Address:192.168.1.0 
+
 Network Address:192.168.1.0 
+
 Usable Host IP Range:192.168.1.1 - 192.168.1.6 
+
 Broadcast Address:192.168.1.7 
+
 Total Number of Hosts:8 
+
 Number of Usable Hosts:6 
+
 Subnet Mask:255.255.255.248 
+
 Binary Subnet Mask:11111111.11111111.11111111.11111000 
+
 IP Class:C 
+
 CIDR Notation:/29 
  
 192.168.1.0/29 
  
- 
-Jedoch wurde unseres Netzwerk bei dieser VPN Verbindung vorgegeben: 
+Jedoch werde ich das vorgegebene Netwzerk bei dieser Konfiguration verwenden.
  
  
  ![grafik](https://user-images.githubusercontent.com/102586033/172191052-a29f3b83-2e8f-49b6-805f-38227204bf91.png)
@@ -79,6 +105,7 @@ Und deswegen werde ich diese Netzwerk verwenden, um mein Labor zu konfigurieren.
  
  ![grafik](https://user-images.githubusercontent.com/102586033/172191204-4e460f0b-6f20-4345-9cd8-9af83d13f3e9.png)
 
+
 Man kann die Interfaces einblenden: 
  
  
@@ -86,6 +113,7 @@ Man kann die Interfaces einblenden:
 
  
 Zustandssteuerung: Ein- und Ausschalten von Geräten 
+
  
  ![grafik](https://user-images.githubusercontent.com/102586033/172191242-1e13879c-6601-4b2c-ba79-a85e1fd7ae27.png)
 
@@ -104,6 +132,7 @@ Zustandssteuerung: Ein- und Ausschalten von Geräten
  
 Console kennenlernen 
 Mit dem Befehl help bekommt man genug Infos, um die Befehle kennenzulernen. 
+
  
  ![grafik](https://user-images.githubusercontent.com/102586033/172191357-8eb13b83-830e-4176-9a1b-4e1ab34ef964.png)
 
@@ -114,9 +143,11 @@ Mit dem Befehl help bekommt man genug Infos, um die Befehle kennenzulernen.
 Statische IP bei PC1: 
  
 Statische IP festlagen 
+
 Usage: 
 Ip subnetmask gateway 
 Ip 192.168.23.10 255.255.255.0 192.168.23.1 
+
  
 Danach mit dem Befehl : show ip kann man die IP anzeigen 
  
@@ -157,6 +188,7 @@ Statische IP bei PC3:
  
  
 Pingen / Erreichbarkeit 
+
 PC3 
  
  ![grafik](https://user-images.githubusercontent.com/102586033/172191584-85b1e238-998c-4a7d-829a-4a119d78e9aa.png)
@@ -178,6 +210,7 @@ PC1
  
  
 Save config 
+
  ![grafik](https://user-images.githubusercontent.com/102586033/172191751-7d8afc8e-2489-4b1f-b8d2-7783f69eb5a4.png)
 
  
@@ -194,9 +227,7 @@ Um Projekt zu speichern, muss man herunterfahren:
  ![grafik](https://user-images.githubusercontent.com/102586033/172191931-ec439905-2f0c-4974-a7b6-e88c844b50d8.png)
 
  
- Die Datei:
-<<gns3 ping sw.gns3project>>
- 
+
  
 Packet trace mit Wireshark durchführen 
  
@@ -206,7 +237,9 @@ Packet trace mit Wireshark durchführen
 
  
  ![grafik](https://user-images.githubusercontent.com/102586033/172192029-7577fcb7-55ff-4c15-9106-cf58eaef5085.png)
+ 
 ![grafik](https://user-images.githubusercontent.com/102586033/172192043-63f194d6-535d-48a0-be84-999713c02636.png)
+
 
  ![grafik](https://user-images.githubusercontent.com/102586033/172192068-eb30e1bb-6238-4174-ac61-8628c88eafaa.png)
 
@@ -215,10 +248,11 @@ Packet trace mit Wireshark durchführen
  
  
  
-Man schicket ein Request und mitbekommt, dass es erreichbar ist "Reply" 
+Man schicket ein Request und erhält ein Replay
+
 ARP: Adresse Resolution Protokoll spiel hier eine Rolle. 
  
-Wenn wir versuchen, eine IP-Adresse anzupingen, wird gleichzeitig eine ARP-Anfrage gesendet. der Computer wird  eine ARP-Antwort erhalten. Die ARP-Tabelle Ihres Computers enthält die IP-Adresse und die MAC-Adresse des Hosts, den Sie zu erreichen versuchen. 
+Wenn wir versuchen, eine IP-Adresse anzupingen, wird gleichzeitig eine ARP-Anfrage gesendet. der Computer wird  eine ARP-Antwort erhalten. Die ARP-Tabelle von unerem Computers enthält die IP-Adresse und die MAC-Adresse des Hosts, den wir zu erreichen versuchen. 
  
  
  
@@ -226,7 +260,15 @@ Wenn wir versuchen, eine IP-Adresse anzupingen, wird gleichzeitig eine ARP-Anfra
 
 
 
+Pingen Schritten:
+
+![grafik](https://user-images.githubusercontent.com/102586033/172257059-f6e888ae-eab8-4617-8197-a4773dc3e29d.png)
+
+
+
+
 Die Datei:
+
 
 ![grafik](https://user-images.githubusercontent.com/102586033/172209322-6934fc44-bced-4189-a8b8-909b9c1c01eb.png)
 
