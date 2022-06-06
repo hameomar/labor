@@ -1,5 +1,15 @@
  
+Aufgabe Link:
+
 https://gitlab.com/ch-tbz-it/Stud/m129/-/tree/main/07_GNS3_Labore#1-labor-1-ping-mit-switch
+
+Anforderungen
+
+PC1,PC2 und PC3 haben je eine statische IPv4-Adresse
+Alle PCs können sich gegenseitig anpingen
+Verwendetes Subnetz ist vermerkt
+Wireshark Packet Traces wurden durchgeführt (und sind dokumentiert!)
+__________________________________________
 
 Switch 
 
