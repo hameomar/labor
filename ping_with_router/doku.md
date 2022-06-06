@@ -48,6 +48,5 @@ Alle Subnetze sind klar vermerkt und Abgrenzungen grafisch erkennbar
 
 
 
-![position](https://user-images.githubusercontent.com/102586033/172213620-d8affa81-6f0a-4f8a-b7fd-31d87acba580.jpg)
 
 
