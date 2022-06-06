@@ -26,7 +26,10 @@ Ein Swicht verfügt über Interfaces und diese werden für "Geräte-Einschließe
  ![grafik](https://user-images.githubusercontent.com/102586033/172191016-3c90d122-c361-4620-9018-646796b6fdb8.png)
 
  
- 
+ Hinweis:
+ können wir mit Layer 2 Switch pingen?
+Nein. Auf Schicht 2 ist es nicht möglich, einen Rahmen an ein anderes Gerät zu senden und eine Antwort zu erwarten.
+
 Auswahl eines Netzwerk: 
 Wir haben bei diesem Labor 3 Geräten zu verbinden. Obwohl wir keinen Router in diesem Topologie haben, werde ich 2 Adressen für die Broadcast und Netzwerk ID berechenen. Das heisst wir brauchen 3 Bits. Mit 3 Bits bekommen wir 8 Adressen: 
 IP Address:192.168.1.0 
