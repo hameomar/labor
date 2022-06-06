@@ -126,13 +126,19 @@ config t
 
 init interface-name
 
-ip add 192.168.x.0 255.255.255.0
+ip add 192.168.x.1 255.255.255.0
 
 no shut
 
 end
 
 show ip int brief
+
+show ip route
+
+conf t
+
+ip route (ip of ziel Netwerk 192.168.x.0) 255.255.255.0  (ip of next hop zum Ziel Netzwerk)
 
 
 
