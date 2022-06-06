@@ -224,3 +224,10 @@ Wenn wir versuchen, eine IP-Adresse anzupingen, wird gleichzeitig eine ARP-Anfra
  
 ![grafik](https://user-images.githubusercontent.com/102586033/172192102-55cdd50a-f326-46b0-bd7d-b22bf71c1ef4.png)
 
+
+
+Die Datei:
+
+![grafik](https://user-images.githubusercontent.com/102586033/172209322-6934fc44-bced-4189-a8b8-909b9c1c01eb.png)
+[labor_ping_mit_switch_exported.zip](https://github.com/hameomar/labor/files/8846185/labor_ping_mit_switch_exported.zip)
+
