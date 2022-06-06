@@ -1,5 +1,8 @@
  
+https://gitlab.com/ch-tbz-it/Stud/m129/-/tree/main/07_GNS3_Labore#1-labor-1-ping-mit-switch
+
 Switch 
+
 Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk miteinander verbindet. In einem Ethernet-Netzwerk, das auf der Sterntopologie basiert, dient ein Switch als Verteiler für die Datenpakete. 
  
 Layer 2 Switch vs Layer 3 
