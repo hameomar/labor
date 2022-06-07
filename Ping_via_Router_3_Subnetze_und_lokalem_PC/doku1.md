@@ -125,4 +125,80 @@ ip route (ip of ziel Netwerk 192.168.x.0) 255.255.255.0  (ip of next hop zum Zie
 _________________________________
 
 
+Diagramm zeichnen:
+
+![grafik](https://user-images.githubusercontent.com/102586033/172315442-f0245dae-deec-41c8-aa13-0a7f3955f259.png)
+
+
+
+____________________________________
+
+Routers Konfigurieren:
+
+R1:
+
+system identity set name=R1
+
+ip add 192.168.23.1 255.255.255.0
+
+ip address add address=192.168.23.1/24 interface=ether1
+
+ip address add address=192.168.28.1/24 interface=ether2
+
+ip address add address=192.168.255.1/30 interface=ether3
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/172323345-f2eee974-a169-4f76-895f-bda61f11d7fd.png)
+
+
+
+R2:
+
+system identity set name=R2
+
+
+ip address add address=192.168.255.1/24 interface=ether3
+
+
+ip address add address=192.168.38.1/30 interface=ether2
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/172323536-eb439ac6-6ec8-46b6-a002-a40925e958b9.png)
+
+
+
+PC1:
+
+ip 192.168.28.2 255.255.255.0 192.168.28.1
+
+ip dns 192.168.28.1
+
+show ip
+
+![grafik](https://user-images.githubusercontent.com/102586033/172321592-a17ec369-00b6-4505-b1b1-2da92d5543bd.png)
+
+
+PC2:
+
+ip 192.168.38.2 255.255.255.0 192.168.38.1
+
+ip dns 192.168.38.1
+
+show ip
+
+![grafik](https://user-images.githubusercontent.com/102586033/172321744-73e0d0b7-7715-4e32-a50f-eacee50a252e.png)
+
+
+_______________
+
+Pingen
+
+
+PC 1 mit PC 2 und gegenseitig:
+
+
+
+
+
+
 
