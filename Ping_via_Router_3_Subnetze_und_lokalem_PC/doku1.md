@@ -204,6 +204,8 @@ _______________________________
 Beide Hosts PC1 und PC2 können auf meinem loklane Laptop pingen:
 
 
+![grafik](https://user-images.githubusercontent.com/102586033/173231540-eb3df904-677c-46d2-a21a-cd0ea68ebb81.png)
+
 
 
 
