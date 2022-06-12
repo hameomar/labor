@@ -99,7 +99,21 @@ Subnet Mask:	255.255.255.252
 
 _______________________________
 
-Router konfigurieren:
+Mikrotik Routers konfigurieren:
+
+IP Address zu Interfaces zugweisen:
+
+ip address add address=192.168.x.1/24 interface=etherx
+
+Rotuing zwischen Netzwerke einrichten:
+
+ip route add dst-address=(ZielNetzwerk/Mask) gateway=nexthop without mask
+
+![grafik](https://user-images.githubusercontent.com/102586033/173229603-9876748c-6393-4690-9df1-dad7a98cdee2.png)
+
+________________________________
+
+non Mikrotik-Router konfigurieren:
 
 en
 
@@ -139,7 +153,6 @@ R1:
 
 system identity set name=R1
 
-ip add 192.168.23.1 255.255.255.0
 
 ip address add address=192.168.23.1/24 interface=ether1
 
@@ -157,16 +170,46 @@ R2:
 system identity set name=R2
 
 
-ip address add address=192.168.255.1/24 interface=ether3
+ip address add address=192.168.255.2/24 interface=ether3
 
 
-ip address add address=192.168.38.1/30 interface=ether2
+ip address add address=192.168.38.2/30 interface=ether2
 
 
-![grafik](https://user-images.githubusercontent.com/102586033/172323536-eb439ac6-6ec8-46b6-a002-a40925e958b9.png)
+![grafik](https://user-images.githubusercontent.com/102586033/173229683-9892a577-17be-4028-aa06-48aa67c679a5.png)
+
+___________________________
+
+IP Route Configuration:
+
+Damit 2 verschiedene Netzwerke miteinander kommunizieren können, kann man eine statische Route konfigurieren:
+
+Bei Mikrotik Routers ist der Befehl so:
+
+ip route add dst-address=(ZielNetzwerk/Mask) gateway=nexthop without mask
 
 
 
+![Screenshot 2022-06-12 130153](https://user-images.githubusercontent.com/102586033/173230039-5be205e6-c9d4-4071-8875-ef0cd18ef67d.jpg)
+
+
+IP Route sieht bei R1 und R2 so aus:
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173230093-5e7240bd-9715-4710-9970-b9ee7e31d401.png)
+
+
+_______________________________
+
+Beide Hosts PC1 und PC2 können auf meinem loklane Laptop pingen:
+
+
+
+
+
+
+
+____________________________
 PC1:
 
 ip 192.168.28.2 255.255.255.0 192.168.28.1
@@ -195,6 +238,16 @@ Pingen
 
 
 PC 1 mit PC 2 und gegenseitig:
+
+![grafik](https://user-images.githubusercontent.com/102586033/173229764-869f9bdc-4da7-4299-b2c3-8f4be19a42dc.png)
+
+
+
+PC 1 auf R2 / PC 2 auf R1:
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173229861-ab4db504-a8e8-46eb-b848-c7e13c9cbe78.png)
+
 
 
 
