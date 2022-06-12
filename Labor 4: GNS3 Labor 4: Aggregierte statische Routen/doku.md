@@ -63,7 +63,7 @@ ip address add address=192.168.111.1/30 interface=ether3
 
 Rotuing zwischen Netzwerke einrichten:
 
-ip route add dst-address=192.168.242.1/24 gateway=192.168.111.1
+ip route add dst-address=192.168.242.0/24 gateway=192.168.111.1
 
 
 PC1:
