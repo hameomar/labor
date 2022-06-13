@@ -199,15 +199,6 @@ IP Route sieht bei R1 und R2 so aus:
 ![grafik](https://user-images.githubusercontent.com/102586033/173230093-5e7240bd-9715-4710-9970-b9ee7e31d401.png)
 
 
-_______________________________
-
-Beide Hosts PC1 und PC2 können auf meinem loklane Laptop pingen:
-
-
-![grafik](https://user-images.githubusercontent.com/102586033/173231540-eb3df904-677c-46d2-a21a-cd0ea68ebb81.png)
-
-
-
 
 
 
@@ -251,6 +242,21 @@ PC 1 auf R2 / PC 2 auf R1:
 ![grafik](https://user-images.githubusercontent.com/102586033/173229861-ab4db504-a8e8-46eb-b848-c7e13c9cbe78.png)
 
 
+
+Vom eigenen Laptop auf PC1 und PC pingen:
+
+Routing Tabelle updaten:
+
+![grafik](https://user-images.githubusercontent.com/102586033/173447449-f29baa9d-7505-4128-8885-cecf10fae738.png)
+
+
+Das kann auch helfen:
+
+![grafik](https://user-images.githubusercontent.com/102586033/173448242-abad6f66-fa42-4867-aff6-f7dfdff1225c.png)
+
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173448434-d78aea44-6381-4331-96f6-ea6f6a23b203.png)
 
 
 
