@@ -80,6 +80,11 @@ Supernet finden:
 /18
 
 neue IP :192.168.192.0
+
+
+Supernetting ist die Methode zur Kombination von zwei oder mehr zusammenhängenden Netzwerkadressräumen, um einen einzigen, größeren Adressraum zu simulieren. Beim Supernetting fügen wir Bits aus dem Netzwerkteil zum Hostteil hinzu. 
+
+
 ______________
 
 ip route add dst-address=192.168.192.0/18 gateway=192.168.111.1
@@ -170,5 +175,28 @@ PC3
 
 
 ![grafik](https://user-images.githubusercontent.com/102586033/173425397-71fd3cb2-c834-44ad-93fd-7ddc6a37ab5e.png)
+
+
+_______________
+
+Pingen vom lokalen eigenen Laptop auf Labor PCs:
+
+Hier müssen wir eine Route auf unserem Computer über cmd oder Powershell hinzufügen und dann sollte es funktionieren:
+
+Alle mögliche Netwerk-Route eingefügt:
+
+![grafik](https://user-images.githubusercontent.com/102586033/173439861-da6a8977-3bc0-4f3d-b23b-bde504d4fb26.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173440032-baa11eb9-5938-4714-afb4-d29151f5cecd.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173440196-bfcf1ce1-610f-4b86-9793-f80ddd7ee365.png)
+
+
+Es gibt immer wieder Problme beim Pingen auf Labor PCs. Ich habe es versucht, mit einem Backloop Adapter einzurichten und es geht gut und ich weiss aber nicht, ob das gut ist:
+
+![grafik](https://user-images.githubusercontent.com/102586033/173443539-29179eb7-2bec-437d-a6a9-5f3ed5bb1536.png)
+
 
 
