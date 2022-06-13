@@ -65,6 +65,21 @@ ip address add address=192.168.111.1/30 interface=ether3
 
 Rotuing zwischen Netzwerke einrichten:
 
+*Auf R1 ist für Netz B und D nur eine Route eingetragen:
+
+
+Supernet finden:
+
+110000001010100011 01001000000000
+
+110000001010100011 11001000000000
+
+
+/18
+
+neue IP :192.168.192.0
+______________
+
 ip route add dst-address=192.168.192.0/18 gateway=192.168.111.1
 
 ![grafik](https://user-images.githubusercontent.com/102586033/173422457-31675756-0697-4e4d-934f-eca29a511407.png)
