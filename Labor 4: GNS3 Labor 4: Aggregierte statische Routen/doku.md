@@ -52,6 +52,8 @@ R1 Konfiguration:
 
 -Auf R1 ist für Netz B und D nur eine Route eingetragen:
 
+![grafik](https://user-images.githubusercontent.com/102586033/173422643-bed7fc16-d4db-4e6e-8e55-9ae3aabd1646.png)
+
 
 ip address add address=192.168.23.1/24 interface=ether1
 ip address add address=192.168.42.1/24 interface=ether2
@@ -63,7 +65,9 @@ ip address add address=192.168.111.1/30 interface=ether3
 
 Rotuing zwischen Netzwerke einrichten:
 
-ip route add dst-address=192.168.242.0/24 gateway=192.168.111.1
+ip route add dst-address=192.168.192.0/18 gateway=192.168.111.1
+
+![grafik](https://user-images.githubusercontent.com/102586033/173422457-31675756-0697-4e4d-934f-eca29a511407.png)
 
 
 PC1:
@@ -92,7 +96,10 @@ PC2:
 Rotuing zwischen Netzwerke einrichten:
 
 ip route add dst-address=192.168.42.1/24 gateway=192.168.111.1
+ip route add dst-address=192.168.242.1/24 gateway=192.168.222.2
 
+
+![grafik](https://user-images.githubusercontent.com/102586033/173422975-6b74b0d0-9a4f-4b27-9ca3-96a71b172335.png)
 
 _____________________________
 
@@ -101,12 +108,18 @@ R3 Konfiguration:
 ip address add address=192.168.242.1/24 interface=ether2
 ip address add address=192.168.111.2/30 interface=ether4
 
-![grafik](https://user-images.githubusercontent.com/102586033/173246395-7c8c47ca-3ac0-4bf3-9621-44c5a2792ef4.png)
+![grafik](https://user-images.githubusercontent.com/102586033/173423351-3e962c99-4f5a-4ef2-b2e5-5e07c977b289.png)
 
 
 Rotuing zwischen Netzwerke einrichten:
 
-ip route add dst-address=192.168.x.0/24 gateway=192.168.
+ip route add dst-address=192.168.42.0/24 gateway=192.168.111.1
+ip route add dst-address=192.168.111.0/30 gateway=192.168.222.1
+ip route add dst-address=192.168.210.0/24 gateway=192.168.222.1
+
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173423343-d645759f-452a-43a1-a292-3cf0e1e116fc.png)
 
 
 PC3:
