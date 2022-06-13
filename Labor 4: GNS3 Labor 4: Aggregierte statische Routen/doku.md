@@ -56,7 +56,9 @@ R1 Konfiguration:
 
 
 ip address add address=192.168.23.1/24 interface=ether1
+
 ip address add address=192.168.42.1/24 interface=ether2
+
 ip address add address=192.168.111.1/30 interface=ether3
 
 ![grafik](https://user-images.githubusercontent.com/102586033/173246172-23f74adf-b391-4106-8829-318cf6d1c743.png)
@@ -95,7 +97,9 @@ _____________________
 R2 Konfiguration:
 
 ip address add address=192.168.210.1/24 interface=ether2
+
 ip address add address=192.168.111.2/30 interface=ether3
+
 ip address add address=192.168.222.1/30 interface=ether4
 
 
@@ -111,6 +115,7 @@ PC2:
 Rotuing zwischen Netzwerke einrichten:
 
 ip route add dst-address=192.168.42.1/24 gateway=192.168.111.1
+
 ip route add dst-address=192.168.242.1/24 gateway=192.168.222.2
 
 
@@ -121,6 +126,7 @@ _____________________________
 R3 Konfiguration:
 
 ip address add address=192.168.242.1/24 interface=ether2
+
 ip address add address=192.168.111.2/30 interface=ether4
 
 ![grafik](https://user-images.githubusercontent.com/102586033/173423351-3e962c99-4f5a-4ef2-b2e5-5e07c977b289.png)
@@ -129,7 +135,9 @@ ip address add address=192.168.111.2/30 interface=ether4
 Rotuing zwischen Netzwerke einrichten:
 
 ip route add dst-address=192.168.42.0/24 gateway=192.168.111.1
+
 ip route add dst-address=192.168.111.0/30 gateway=192.168.222.1
+
 ip route add dst-address=192.168.210.0/24 gateway=192.168.222.1
 
 
@@ -141,5 +149,26 @@ PC3:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/173246446-2557b32d-fca0-4ff6-a264-3937ae60d37f.png)
 
+
+_________________
+Erreichbarkeit (Pingen)
+
+PC1
+
+![grafik](https://user-images.githubusercontent.com/102586033/173425046-3b541c11-0152-46c8-adfb-dc1e1fcf7558.png)
+
+
+PC2
+
+![grafik](https://user-images.githubusercontent.com/102586033/173425177-1f4f7389-b80e-425c-8be5-01ee07735c86.png)
+
+
+
+PC3
+
+![grafik](https://user-images.githubusercontent.com/102586033/173425321-dd5b5f6a-596c-4e5d-ae01-d6c2a988931a.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173425397-71fd3cb2-c834-44ad-93fd-7ddc6a37ab5e.png)
 
 
