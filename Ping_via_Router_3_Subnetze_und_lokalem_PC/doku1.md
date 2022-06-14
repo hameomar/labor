@@ -1,5 +1,7 @@
 
-ping mit Router
+Labor 3
+
+_______________________
 
 Aufgabe Link:
 https://gitlab.com/ch-tbz-it/Stud/m129/-/tree/main/07_GNS3_Labore#2-labor-2-ping-mit-router
@@ -163,6 +165,17 @@ ip address add address=192.168.255.1/30 interface=ether3
 
 ![grafik](https://user-images.githubusercontent.com/102586033/172323345-f2eee974-a169-4f76-895f-bda61f11d7fd.png)
 
+R1 Route Konfiguration
+
+ip route add dst-address=192.168.23.0/24 gateway=192.168.23.1
+
+ip route add dst-address=192.168.38.0/24 gateway=192.168.255.2
+
+![grafik](https://user-images.githubusercontent.com/102586033/173505747-42a154ce-0957-4ff8-9e8b-944ea2ec97d2.png)
+
+
+
+_____________________________________
 
 
 R2:
@@ -177,6 +190,12 @@ ip address add address=192.168.38.2/30 interface=ether2
 
 
 ![grafik](https://user-images.githubusercontent.com/102586033/173229683-9892a577-17be-4028-aa06-48aa67c679a5.png)
+
+
+R2 Route Konfiguration:
+
+![grafik](https://user-images.githubusercontent.com/102586033/173505968-3da763ff-83e5-41ea-be82-afd8f230520c.png)
+
 
 ___________________________
 
