@@ -87,9 +87,14 @@ Supernetting ist die Methode zur Kombination von zwei oder mehr zusammenhängend
 
 ______________
 
+R1 IP Route 
+
 ip route add dst-address=192.168.192.0/18 gateway=192.168.111.1
 
 ![grafik](https://user-images.githubusercontent.com/102586033/173422457-31675756-0697-4e4d-934f-eca29a511407.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/173507904-726e0b1d-e68c-4657-af57-274f4fedee8f.png)
 
 
 PC1:
