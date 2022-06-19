@@ -90,6 +90,108 @@ Zunächst stelle ich sicher, dass es keine statische Route via 192.168.23.0/24 e
 
 ![grafik](https://user-images.githubusercontent.com/102586033/174460821-d6823a84-c96c-407c-83a3-c83ff9371a47.png)
 
+______________________
+Jeweils ein DHCP Server für Subnetze A und B .PC1 bis PC4 erhalten IP Adresse via DHCP:
+
+DHCP:
+
+Das Dynamic Host Configuration Protocol (DHCP) ist ein Client/Server-Protokoll, das einem Internet Protocol (IP)-Host automatisch seine IP-Adresse und andere zugehörige Konfigurationsinformationen wie die Subnetzmaske und das Standard-Gateway liefert. 
+
+R1:
+
+ip dhcp-server/ setup
+
+Select interface to run DHCP server on
+
+dhcp server interface: ether3
+
+Select network for DHCP addresses
+
+dhcp address space: 192.168.50.0/24
+
+Select gateway for given network
+
+gateway for dhcp network: 192.168.50.1
+
+Select pool of ip addresses given out by DHCP server
+
+ich werde die Adressen 192.168.50.1 und 192.168.50.2 für die beide Interfaces statisch festlegen.
+
+addresses to give out: 192.168.50.3-192.168.50.254
+
+Select DNS servers
+
+dns servers: 192.168.50.1
+
+Select lease time
+
+lease time: 3d
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/174498426-94a709d6-4120-412a-a660-b581a722f8f0.png)
+
+Interface ether2 ist mit dem DHCP Server nicht verbunden und ich werde den Pool zu Interface Ether2 auch zuweisen und danach kann PC2 eine IP Adresse vom DHCP Server bekommen:
+
+
+/ip/dhcp-server>  add interface=ether2 address-pool=dhcp_pool0 
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/174499819-5ba866eb-676a-4a33-9178-3c1b3f3d5257.png)
+
+______________________
+
+PC 1 und PC2 haben IP vom DHCP Server bekommen:
+
+![grafik](https://user-images.githubusercontent.com/102586033/174500057-2d4f82ab-f406-4ffd-9bbd-d4ca97a94fcc.png)
+
+
+______________________
+
+R2 :
+
+[admin@MikroTik] /ip/dhcp-server> setup
+Select interface to run DHCP server on
+
+dhcp server interface: ether2 ether3
+input does not match any value of interface
+dhcp server interface: ether2, ether3
+input does not match any value of interface
+dhcp server interface: ether2
+Select network for DHCP addresses
+
+dhcp address space: 192.168.51.0/24
+Select gateway for given network
+
+gateway for dhcp network: 192.168.51.1
+Select pool of ip addresses given out by DHCP server
+
+addresses to give out: 192.168.51.3-192.168.51.254
+Select DNS servers
+
+dns servers: 8.8.8.8
+Select lease time
+
+lease time: 3d
+
+![grafik](https://user-images.githubusercontent.com/102586033/174500128-a397f40d-4604-40d7-9d63-1af10299cb40.png)
+
+
+Interface 3 zum Pool einfügen:
+
+add interface=ether3 address-pool=dhcp_pool0 lease-time 3d
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/174500201-c9c2dde6-b9c4-49f8-989c-389857a74d68.png)
+
+_________________
+PC 3 und PC 4 haben IPs vom DHCP Server bekommen:
+
+![grafik](https://user-images.githubusercontent.com/102586033/174500236-cb2253b7-ba2c-4eb9-b806-2af35c5b7651.png)
+
+
+
+
+
 
 ______________________
 
