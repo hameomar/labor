@@ -93,3 +93,7 @@ Zunächst stelle ich sicher, dass es keine statische Route via 192.168.23.0/24 e
 
 ______________________
 
+pingen:
+
+![grafik](https://user-images.githubusercontent.com/102586033/174461150-6147e4e3-8e67-4eb6-8644-c23d42c025e0.png)
+
