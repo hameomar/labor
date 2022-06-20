@@ -193,7 +193,7 @@ PC 3 und PC 4 haben IPs vom DHCP Server bekommen:
 
 
 
-______________________
+_____________________
 
 pingen:
 
