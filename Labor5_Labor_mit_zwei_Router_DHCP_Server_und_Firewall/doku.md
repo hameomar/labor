@@ -89,6 +89,27 @@ Zunächst stelle ich sicher, dass es keine statische Route via 192.168.23.0/24 e
 
 
 ![grafik](https://user-images.githubusercontent.com/102586033/174460821-d6823a84-c96c-407c-83a3-c83ff9371a47.png)
+_____________________
+
+Default Route:Weil wir CLoud eingefügt haben.
+
+Default-Route
+
+Die Route mit der dst-Adresse 0.0.0.0/0 gilt für jede Zieladresse. Eine solche Route wird als Standard-Route bezeichnet. Wenn die Routing-Tabelle eine aktive Standard-Route enthält, wird die Suche in der Routing-Tabelle niemals fehlschlagen. 
+
+R1
+
+![grafik](https://user-images.githubusercontent.com/102586033/174672255-e4837fd8-b272-48e4-b056-f0e13b14e450.png)
+
+R2
+
+![grafik](https://user-images.githubusercontent.com/102586033/174672398-abfb6e61-fd4e-41d1-95d3-80f99f599d5b.png)
+
+
+______________
+
+
+_______________
 
 ______________________
 Jeweils ein DHCP Server für Subnetze A und B .PC1 bis PC4 erhalten IP Adresse via DHCP:
@@ -198,4 +219,15 @@ _____________________
 pingen:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/174461150-6147e4e3-8e67-4eb6-8644-c23d42c025e0.png)
+
+
+______________
+
+
+
+R1 kann Router 2 anpingen und umgekehrt
+
+![grafik](https://user-images.githubusercontent.com/102586033/174675639-529f7d03-d684-435c-84c6-0849f5299866.png)
+
+
 
