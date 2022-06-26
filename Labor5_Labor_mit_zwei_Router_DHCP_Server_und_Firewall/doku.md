@@ -1,33 +1,6 @@
 Labor 5 - zwei Router, DHCP Server und Firewall
 _______________________
 
-ether1= 192.168.50.1
-
-ip pool add range=192.168.50.1-192.168.50.127 name=range1
-
-ip dhcp-server add name=range1 address-pool=range1 interface=ether3
-
-ip dhcp-server network add address=192.168.50.0/24 gateway=192.168.50.1 dns-server=8.8.8.8
-
-ip dhcp-server enable number=range1
-__________________
-
-ether 2 = 192.168.50.2
-
-ip pool  add range=192.168.50.128-192.168.50.254 name=range2
-ip dhcp-server add name=range2 address-pool=range2 interface=ether2
-
-ip dhcp-server network add address=192.168.50.0/24 gateway=192.168.50.128 dns-server=8.8.8.8
-
-ip dhcp-server enable number=range2
-
-
-_____________
-
-add action=drop chain=forward dst-address=192.168.50.2 protocol=udp src-address=192.168.50.1 src-port=67-68
-
-________________
-
 Anforderungen:
 
 Mind 2 /24 Subnetze (Netz A und Netz B)
@@ -145,13 +118,60 @@ DHCP:
 
 Das Dynamic Host Configuration Protocol (DHCP) ist ein Client/Server-Protokoll, das einem Internet Protocol (IP)-Host automatisch seine IP-Adresse und andere zugehörige Konfigurationsinformationen wie die Subnetzmaske und das Standard-Gateway liefert. 
 
+Wir durfen nicht, 2 DHCP Server in einem Netzwerk auf einem Router erstellen. Wir können 2 Pools "Ranges" erstellen und die beide Interfaces Ether1 und Ether2 als DHCP Client einstellen, damit sie die IPs verteilen/zuweisen können:
+
+_________________________
+Update für die Konfiguration:
+
+
+
+ether1= 192.168.50.1
+
+ip pool add range=192.168.50.1-192.168.50.127 name=range1
+
+ip dhcp-server add name=range1 address-pool=range1 interface=ether3
+
+ip dhcp-server network add address=192.168.50.0/24 gateway=192.168.50.1 dns-server=8.8.8.8
+
+ip dhcp-server enable number=range1
+__________________
+
+ether 2 = 192.168.50.2
+
+ip pool  add range=192.168.50.128-192.168.50.254 name=range2
+
+ip dhcp-server add name=range2 address-pool=range2 interface=ether2
+
+ip dhcp-server enable number=range2
+
+DHCP Client > ether1 und ehter1 einfügen, damit die beide IPS zuweisen können:
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175834925-16833666-64a4-4629-a3aa-3e6a5f34c7d6.png)
+
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175834932-c38edad1-f17c-4020-bad3-922e232b38fc.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175834940-7c27ebd4-45da-41d3-af75-31d13ba2da33.png)
+
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175834954-e3031211-d950-49d7-9d2c-e76479406d19.png)
+
+
+
+
+_______________________
+
 R1:
 
 ip dhcp-server/ setup
 
 Select interface to run DHCP server on
 
-dhcp server interface: ether3
+dhcp server interface: ether1
 
 Select network for DHCP addresses
 
@@ -200,9 +220,9 @@ R2 :
 [admin@MikroTik] /ip/dhcp-server> setup
 Select interface to run DHCP server on
 
-dhcp server interface: ether2 ether3
+dhcp server interface: ether2 ether1
 input does not match any value of interface
-dhcp server interface: ether2, ether3
+dhcp server interface: ether2, ether1
 input does not match any value of interface
 dhcp server interface: ether2
 Select network for DHCP addresses
@@ -213,7 +233,7 @@ Select gateway for given network
 gateway for dhcp network: 192.168.51.1
 Select pool of ip addresses given out by DHCP server
 
-addresses to give out: 192.168.51.3-192.168.51.254
+addresses to give out: 192.168.51.1-192.168.51.254
 Select DNS servers
 
 dns servers: 8.8.8.8
