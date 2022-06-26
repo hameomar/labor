@@ -124,6 +124,9 @@ _________________________
 Update für die Konfiguration:
 
 
+![grafik](https://user-images.githubusercontent.com/102586033/175834989-dfdbb1f6-7cee-4dda-9789-f92ad00bad7e.png)
+
+
 
 ether1= 192.168.50.1
 
@@ -257,8 +260,41 @@ PC 3 und PC 4 haben IPs vom DHCP Server bekommen:
 ![grafik](https://user-images.githubusercontent.com/102586033/174500236-cb2253b7-ba2c-4eb9-b806-2af35c5b7651.png)
 
 
+_______________________________________
+
+DHCP Konfiguration R2
 
 
+ip pool add range=192.168.51.1-192.168.51.127 name=range1
+
+ip dhcp-server add name=range1 address-pool=range1 interface=ether2
+
+ip dhcp-server network add address=192.168.51.0/24 gateway=192.168.51.1 dns-server=8.8.8.8
+
+ip dhcp-server enable number=range1
+
+
+ether 3 = 192.168.51.2
+
+ip pool  add range=192.168.51.128-192.168.51.254 name=range2
+ip dhcp-server add name=range2 address-pool=range2 interface=ether3
+
+ip dhcp-server enable number=range2
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175835244-a06fa2e5-cbcc-40a3-b312-14ebbfbe7832.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175835258-68daa994-0c0a-447b-b1b1-66bc7a5cf848.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175835271-f056b694-cbaa-42d3-8c64-5406402328e8.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175835282-84185878-ebd4-4941-bde0-148c10601f3e.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/175835286-2a245c6e-395d-47ef-8c2e-26c30b0e7f9c.png)
 
 
 _____________________
