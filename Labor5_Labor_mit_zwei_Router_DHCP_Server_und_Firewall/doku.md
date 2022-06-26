@@ -1,6 +1,33 @@
 Labor 5 - zwei Router, DHCP Server und Firewall
 _______________________
 
+ether1= 192.168.50.1
+
+ip pool add range=192.168.50.1-192.168.50.127 name=range1
+
+ip dhcp-server add name=range1 address-pool=range1 interface=ether3
+
+ip dhcp-server network add address=192.168.50.0/24 gateway=192.168.50.1 dns-server=8.8.8.8
+
+ip dhcp-server enable number=range1
+__________________
+
+ether 2 = 192.168.50.2
+
+ip pool  add range=192.168.50.128-192.168.50.254 name=range2
+ip dhcp-server add name=range2 address-pool=range2 interface=ether2
+
+ip dhcp-server network add address=192.168.50.0/24 gateway=192.168.50.128 dns-server=8.8.8.8
+
+ip dhcp-server enable number=range2
+
+
+_____________
+
+add action=drop chain=forward dst-address=192.168.50.2 protocol=udp src-address=192.168.50.1 src-port=67-68
+
+________________
+
 Anforderungen:
 
 Mind 2 /24 Subnetze (Netz A und Netz B)
