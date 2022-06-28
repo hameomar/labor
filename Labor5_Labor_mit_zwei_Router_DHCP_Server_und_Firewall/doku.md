@@ -304,6 +304,14 @@ Kommunikation zwischen R1 und R2 via NET C
 ![grafik](https://user-images.githubusercontent.com/102586033/176106666-769c2533-5c32-4e3d-b9d4-8da9186492ac.png)
 
 _____________________
+webinterface vom Router:
+
+![grafik](https://user-images.githubusercontent.com/102586033/176112797-ddac2188-2cba-4bc4-96fd-43e3d9655c79.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/176112692-9444f3fe-cb16-4662-bbe2-3124d9ce51fb.png)
+
+_________
 
 pingen:
 
