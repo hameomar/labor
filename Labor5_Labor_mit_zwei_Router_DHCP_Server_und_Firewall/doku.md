@@ -311,6 +311,22 @@ webinterface vom Router:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/176112692-9444f3fe-cb16-4662-bbe2-3124d9ce51fb.png)
 
+______________
+Block Ping vom 192.168.23.0/24 auf PC1 und PC2 (192.168.50.0/24)
+
+![grafik](https://user-images.githubusercontent.com/102586033/176113833-18edb789-6417-44b0-9950-3f852d1e23ad.png)
+
+![grafik](https://user-images.githubusercontent.com/102586033/176115202-bb4d009a-effe-4341-b145-437638468faa.png)
+
+
+______________
+
+R1 und R2 pingabr vom Laptop:
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/176117512-b86e87f9-e722-40b4-8ce3-251af4c52a4e.png)
+
+
 _________
 
 pingen:
