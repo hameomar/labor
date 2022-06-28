@@ -1,5 +1,13 @@
 Labor 5 - zwei Router, DHCP Server und Firewall
 _______________________
+Achtung diese Werkstatt ist nicht ganz korrekt.
+
+Die Routing Tabelle ist nicht logisch.
+
+Das Diagramm ist nicht krorekt, weil wir für einen DHCP Server (Router) zu PCs wir einen Switch brauchen
+
+
+__________________
 
 Anforderungen:
 
