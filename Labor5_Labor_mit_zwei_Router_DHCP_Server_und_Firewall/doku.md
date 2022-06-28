@@ -299,6 +299,12 @@ ip dhcp-server enable number=range2
 
 _____________________
 
+Kommunikation zwischen R1 und R2 via NET C
+
+![grafik](https://user-images.githubusercontent.com/102586033/176106666-769c2533-5c32-4e3d-b9d4-8da9186492ac.png)
+
+_____________________
+
 pingen:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/174461150-6147e4e3-8e67-4eb6-8644-c23d42c025e0.png)
