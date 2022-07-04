@@ -17,12 +17,12 @@ Alle Subnetze sind klar vermerkt und Abgrenzungen sind grafisch erkennbar.
 MGMT Netz wird NUR für Management verwenden (Bei DHCP-Client für eth1 "Add Default Route" deaktivieren)
 
 _______________
-#Zeichnen:
+# Zeichnen:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177206376-07b1abbb-e53e-4ec7-98c9-27414cfca85a.png)
 
 _____________________
-#R1 (Core) Cofiguration:
+# R1 (Core) Cofiguration:
 
 
 [admin@Core] > ip add print
