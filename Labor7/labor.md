@@ -105,5 +105,6 @@ Es handelt sich dabei um eine Art von Netzwerkadressenübersetzung (NAT), die di
 ![grafik](https://user-images.githubusercontent.com/102586033/177218157-59b96598-d41c-4a44-b876-2d15e8541e36.png)
 
 
+![grafik](https://user-images.githubusercontent.com/102586033/177222830-c22aafdd-bb47-4e2c-9715-9f86e70b759b.png)
 
 
