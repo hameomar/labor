@@ -63,7 +63,24 @@ DAc 192.168.192.0/29  ether1                0
 ![grafik](https://user-images.githubusercontent.com/102586033/177206457-5688ca71-d28e-4d1f-b047-cea9d2dd4a33.png)
 
 
-NAT Config:
+NAT Configuration:
+
+NAT steht für Network Address Translation. Es ist eine Möglichkeit, mehrere lokale private Adressen auf eine öffentliche Adresse abzubilden, bevor die Informationen übertragen werden. Unternehmen, die möchten, dass mehrere Geräte eine einzige IP-Adresse verwenden, nutzen NAT, ebenso wie die meisten Heimrouter.
+
+
+Source-NAT
+Masquerade.
+
+Firewall NAT action=masquerade ist eine einzigartige Unterversion von action=srcnat, sie wurde speziell für den Einsatz in Situationen entwickelt, in denen sich die öffentliche IP-Adresse zufällig ändern kann, z.B. wenn der DHCP-Server sie ändert oder der PPPoE-Tunnel nach der Trennung eine andere IP-Adresse erhält, kurz gesagt - wenn die öffentliche IP-Adresse dynamisch ist.
+
+Jedes Mal, wenn die Schnittstelle getrennt wird und/oder ihre IP-Adresse sich ändert, löscht der Router alle Einträge zur Verfolgung der maskierten Verbindung, die Pakete über diese Schnittstelle senden, und verbessert so die Wiederherstellungszeit des Systems nach einer Änderung der öffentlichen IP-Adresse.
+
+
+srcnat NAT
+
+Diese Art von NAT wird auf Pakete angewandt, die aus einem natted network stammen. Ein NAT-Router ersetzt die private Quelladresse eines IP-Pakets durch eine neue öffentliche IP-Adresse, während es den Router durchläuft. Der umgekehrte Vorgang wird auf die Antwortpakete angewandt, die in die andere Richtung reisen.
+
+
 
 
 
@@ -77,6 +94,11 @@ Flags: X - disabled, I - invalid; D - dynamic
 
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177206617-a60ded08-58d4-4848-90a7-2f3a87ae036f.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/177209183-a301c920-d275-4a14-bf09-d2d8c3f92a08.png)
+
+
 
 
 DHCP Server Konfiguration:
