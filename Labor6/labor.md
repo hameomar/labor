@@ -25,11 +25,31 @@ _____________________
 # R1 (Core) Cofiguration:
 
 
+[admin@Core] > ip route print
+
+Flags: D - DYNAMIC; A - ACTIVE; c, s, y - COPY
+
+Columns: DST-ADDRESS, GATEWAY, DISTANCE
+
+     DST-ADDRESS       GATEWAY        DISTANCE
+
+0  As 0.0.0.0/0         192.168.122.1         1
+
+DAc 172.16.28.0/30    ether3                0
+
+DAc 172.16.28.4/30    ether4                0
+
+1  As 192.168.18.0/24   172.16.28.2           1
+
+DAc 192.168.122.0/24  ether2                0
+
+DAc 192.168.192.0/29  ether1                0
+
 [admin@Core] > ip add print
 
 Columns: ADDRESS, NETWORK, INTERFACE
 
-ADDRESS            NETWORK        INTERFACE
+ ADDRESS            NETWORK        INTERFACE
 
 0 192.168.122.25/24  192.168.122.0  ether2
 
@@ -39,28 +59,11 @@ ADDRESS            NETWORK        INTERFACE
 
 3 192.168.192.1/29   192.168.192.0  ether1
 
-[admin@Core] > ip route print
 
-Flags: D - DYNAMIC; A - ACTIVE; c, s, y - COPY
-
-Columns: DST-ADDRESS, GATEWAY, DISTANCE
-
-    DST-ADDRESS       GATEWAY        DISTANCE
-
-0  As 0.0.0.0/0         192.168.122.1         1
-
-DAc 172.16.28.0/30    ether3                0
-
-DAc 172.16.28.4/30    ether4                0
-
-DAc 192.168.122.0/24  ether2                0
-
-DAc 192.168.192.0/29  ether1                0
-
-[admin@Core] >
+![grafik](https://user-images.githubusercontent.com/102586033/177210618-64dec511-7bec-483e-aa97-f32f9a2df554.png)
 
 
-![grafik](https://user-images.githubusercontent.com/102586033/177206457-5688ca71-d28e-4d1f-b047-cea9d2dd4a33.png)
+
 
 
 # NAT Configuration:
