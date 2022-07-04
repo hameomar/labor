@@ -240,6 +240,11 @@ ______________
 
 
  
+ ______________
+ Die Datei:
+ 
+ [Labor6_Omar_v4.zip](https://github.com/hameomar/labor/files/9041804/Labor6_Omar_v4.zip)
+
  
 
  
