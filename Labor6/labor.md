@@ -96,12 +96,107 @@ _____________
 R2 Conifguration:
 
 
+[admin@R2] > ip route print
 
+Flags: D - DYNAMIC; A - ACTIVE; c, s, y - COPY
+
+Columns: DST-ADDRESS, GATEWAY, DISTANCE
+
+#     DST-ADDRESS       GATEWAY      DISTANCE
+
+0  As 0.0.0.0/0         172.16.28.1         1
+
+DAc 172.16.28.0/30    ether2              0
+
+1  As 172.16.28.4/30    172.16.28.1         1
+
+DAc 192.168.18.0/24   ether3              0
+
+2  As 192.168.122.0/24  172.16.28.1         1
+
+DAc 192.168.192.0/29  ether1              0
+
+[admin@R2] > ip add print
+
+Columns: ADDRESS, NETWORK, INTERFACE
+
+# ADDRESS           NETWORK        INTERFACE
+
+0 192.168.192.2/29  192.168.192.0  ether1
+
+1 192.168.18.1/24   192.168.18.0   ether3
+
+2 172.16.28.2/30    172.16.28.0    ether2
+
+[admin@R2] >
+
+![grafik](https://user-images.githubusercontent.com/102586033/177208193-96f0c9b5-43b9-4cad-8a61-a3ca73233aad.png)
+
+DHCP RELAY
+
+![grafik](https://user-images.githubusercontent.com/102586033/177208292-1c9b819d-8278-4633-86c7-ffe2bcc85940.png)
+
+
+_______________
+
+R3 Konfiguration:
+
+![grafik](https://user-images.githubusercontent.com/102586033/177208388-8fbb3c99-88b1-430d-8944-f8ba4431aac5.png)
+
+
+[admin@R3] > ip add print
+
+Columns: ADDRESS, NETWORK, INTERFACE
+
+# ADDRESS           NETWORK        INTERFACE
+
+0 192.168.192.3/29  192.168.192.0  ether1
+
+1 172.16.28.6/30    172.16.28.4    ether2
+
+2 192.168.18.3/24   192.168.18.0   ether3
+
+[admin@R3] > ip route print
+
+Flags: D - DYNAMIC; A - ACTIVE; c, s, y - COPY
+
+Columns: DST-ADDRESS, GATEWAY, DISTANCE
+
+#     DST-ADDRESS       GATEWAY      DISTANCE
+
+0  As 0.0.0.0/0         172.16.28.5         1
+
+1  As 172.16.28.0/30    172.16.28.5         1
+
+DAc 172.16.28.4/30    ether2              0
+
+DAc 192.168.18.0/24   ether3              0
+
+2  As 192.168.122.0/24  172.16.28.5         1
+
+DAc 192.168.192.0/29  ether1              0
+
+[admin@R3] >
+
+
+DHCP RELAY
+
+![grafik](https://user-images.githubusercontent.com/102586033/177208528-5b250c46-6c4d-4d55-8dbc-b01427361295.png)
 
 _________
+
+PC1 und PC2 können DNS auflösen/ 8.8.8.8 und sich gegenseitig anpingen und verwenden dieselbe Subnet:
+
+![grafik](https://user-images.githubusercontent.com/102586033/177208814-956a91c3-1357-493c-b881-dc414287c773.png)
 
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177207333-3b4e06d4-9fa2-420a-a095-587d6f184da4.png)
 
 
+__________________
+MGMT1 NETZ wird nur für Managment verwendet.
+/29 Subnet verwendet
 
+![grafik](https://user-images.githubusercontent.com/102586033/177208980-4b614311-ba7f-40b3-a80a-bc76d789ba7f.png)
+
+Das Häkchen ist nicht eingesetzt.
