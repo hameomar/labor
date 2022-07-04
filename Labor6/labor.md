@@ -1,8 +1,8 @@
-Labor 6
+# Labor 6
 
 
 ________________
-Anforderungen:
+# Anforderungen:
 
 PC1 und PC2 verwenden dasselbe Subnetz
 
@@ -17,19 +17,19 @@ Alle Subnetze sind klar vermerkt und Abgrenzungen sind grafisch erkennbar.
 MGMT Netz wird NUR für Management verwenden (Bei DHCP-Client für eth1 "Add Default Route" deaktivieren)
 
 _______________
-Zeichnen:
+#Zeichnen:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177206376-07b1abbb-e53e-4ec7-98c9-27414cfca85a.png)
 
 _____________________
-R1 (Core) Cofiguration:
+#R1 (Core) Cofiguration:
 
 
 [admin@Core] > ip add print
 
 Columns: ADDRESS, NETWORK, INTERFACE
 
-# ADDRESS            NETWORK        INTERFACE
+ADDRESS            NETWORK        INTERFACE
 
 0 192.168.122.25/24  192.168.122.0  ether2
 
@@ -45,7 +45,7 @@ Flags: D - DYNAMIC; A - ACTIVE; c, s, y - COPY
 
 Columns: DST-ADDRESS, GATEWAY, DISTANCE
 
-#     DST-ADDRESS       GATEWAY        DISTANCE
+    DST-ADDRESS       GATEWAY        DISTANCE
 
 0  As 0.0.0.0/0         192.168.122.1         1
 
@@ -63,7 +63,7 @@ DAc 192.168.192.0/29  ether1                0
 ![grafik](https://user-images.githubusercontent.com/102586033/177206457-5688ca71-d28e-4d1f-b047-cea9d2dd4a33.png)
 
 
-NAT Configuration:
+# NAT Configuration:
 
 NAT steht für Network Address Translation. Es ist eine Möglichkeit, mehrere lokale private Adressen auf eine öffentliche Adresse abzubilden, bevor die Informationen übertragen werden. Unternehmen, die möchten, dass mehrere Geräte eine einzige IP-Adresse verwenden, nutzen NAT, ebenso wie die meisten Heimrouter.
 
@@ -101,7 +101,7 @@ Flags: X - disabled, I - invalid; D - dynamic
 
 
 
-DHCP Server Konfiguration:
+# DHCP Server Konfiguration:
 
 Auf Core R1 habe ich den DHCP Server konfiguriert. Auf R2 und R3 habe ich je ein DHCP Relay.
 Ein DHCP-Relay-Agent ist ein Host oder Router, der DHCP-Pakete zwischen Clients und Servern weiterleitet. Netzwerkadministratoren können den DHCP-Relay-Dienst der SD-WAN-Appliances nutzen, um Anfragen und Antworten zwischen lokalen DHCP-Clients und einem entfernten DHCP-Server weiterzuleiten.
@@ -115,7 +115,7 @@ Ein DHCP-Relay-Agent ist ein Host oder Router, der DHCP-Pakete zwischen Clients 
 
 
 _____________
-R2 Conifguration:
+# R2 Conifguration:
 
 
 [admin@R2] > ip route print
@@ -124,7 +124,7 @@ Flags: D - DYNAMIC; A - ACTIVE; c, s, y - COPY
 
 Columns: DST-ADDRESS, GATEWAY, DISTANCE
 
-#     DST-ADDRESS       GATEWAY      DISTANCE
+     DST-ADDRESS       GATEWAY      DISTANCE
 
 0  As 0.0.0.0/0         172.16.28.1         1
 
@@ -142,7 +142,7 @@ DAc 192.168.192.0/29  ether1              0
 
 Columns: ADDRESS, NETWORK, INTERFACE
 
-# ADDRESS           NETWORK        INTERFACE
+ ADDRESS           NETWORK        INTERFACE
 
 0 192.168.192.2/29  192.168.192.0  ether1
 
@@ -154,14 +154,14 @@ Columns: ADDRESS, NETWORK, INTERFACE
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177208193-96f0c9b5-43b9-4cad-8a61-a3ca73233aad.png)
 
-DHCP RELAY
+# DHCP RELAY
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177208292-1c9b819d-8278-4633-86c7-ffe2bcc85940.png)
 
 
 _______________
 
-R3 Konfiguration:
+# R3 Konfiguration:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177208388-8fbb3c99-88b1-430d-8944-f8ba4431aac5.png)
 
@@ -170,7 +170,7 @@ R3 Konfiguration:
 
 Columns: ADDRESS, NETWORK, INTERFACE
 
-# ADDRESS           NETWORK        INTERFACE
+ ADDRESS           NETWORK        INTERFACE
 
 0 192.168.192.3/29  192.168.192.0  ether1
 
@@ -184,7 +184,7 @@ Flags: D - DYNAMIC; A - ACTIVE; c, s, y - COPY
 
 Columns: DST-ADDRESS, GATEWAY, DISTANCE
 
-#     DST-ADDRESS       GATEWAY      DISTANCE
+    DST-ADDRESS       GATEWAY      DISTANCE
 
 0  As 0.0.0.0/0         172.16.28.5         1
 
@@ -201,7 +201,7 @@ DAc 192.168.192.0/29  ether1              0
 [admin@R3] >
 
 
-DHCP RELAY
+# DHCP RELAY
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177208528-5b250c46-6c4d-4d55-8dbc-b01427361295.png)
 
