@@ -219,9 +219,27 @@ PC1 und PC2 können DNS auflösen/ 8.8.8.8 und sich gegenseitig anpingen und ver
 
 
 __________________
-MGMT1 NETZ wird nur für Managment verwendet.
+
+
+# MGMT1 NETZ wird nur für Managment verwendet.
 /29 Subnet verwendet
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177208980-4b614311-ba7f-40b3-a80a-bc76d789ba7f.png)
 
 Das Häkchen ist nicht eingesetzt.
+
+______________
+
+# Alle Routers können sich gegenseitig anpingen
+
+
+ ![grafik](https://user-images.githubusercontent.com/102586033/177210930-700c6b4d-c785-4f1e-a005-ff4e3332eca6.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/177210944-759efeee-5861-4a62-b9b0-c15bef6e7a61.png)
+
+
+ 
+ 
+
+ 
