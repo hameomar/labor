@@ -41,6 +41,19 @@ Zeichnen
 ![grafik](https://user-images.githubusercontent.com/102586033/177213647-961c8e55-15c2-4568-9955-25a324310a08.png)
 
 ____________________________
+Wichtige Hinweise:
+
+Eine Routing-Tabelle ist eine Reihe von Regeln, die oft in Tabellenform angezeigt werden und mit deren Hilfe bestimmt wird, wohin Datenpakete, die über ein Internet-Protokoll (IP)-Netz laufen, geleitet werden. Alle IP-fähigen Geräte, einschließlich Router und Switches, verwenden Routing-Tabellen. Siehe unten eine Routing-Tabelle:
+
+mit der Routing Tabelle fangt man mit :
+
+1-Default Route
+2-sämtliche Netzwerke
+
+
+
+___________________
+
 
 # Lizenzen:
 
