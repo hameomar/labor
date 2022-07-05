@@ -58,6 +58,9 @@ Für diese Version ist die Aktivierung nicht möglich
 ![grafik](https://user-images.githubusercontent.com/102586033/177215963-2ca49e48-5db1-4553-944b-b17c10df7613.png)
 
 
+![grafik](https://user-images.githubusercontent.com/102586033/177254753-87854e7c-fbaa-4191-8959-0bb7ac346357.png)
+
+
 ________________________
 
 # R1, R2 Konfiguration:
