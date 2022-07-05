@@ -60,6 +60,11 @@ Für diese Version ist die Aktivierung nicht möglich
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177254753-87854e7c-fbaa-4191-8959-0bb7ac346357.png)
 
+Die Lizenz ist free
+
+![grafik](https://user-images.githubusercontent.com/102586033/177267507-b9b1aadc-2291-4f6a-83df-8861e7050df7.png)
+
+![grafik](https://user-images.githubusercontent.com/102586033/177267590-0d299d44-7e27-4742-b6c3-9f409f5c9419.png)
 
 ________________________
 
