@@ -73,14 +73,51 @@ __________________________
 ![grafik](https://user-images.githubusercontent.com/102586033/177216754-cf8346b2-f544-4480-bebf-c6287489aedc.png)
 
 
+Installation
+
+Es gibt verschiedene DHCP-Client-Pakete. Das Standardpaket für Debian scheint dhcp-client zu sein. Es ist wahrscheinlich bereits installiert, wie Sie mit aptitude überprüfen können. Aber um sicher zu gehen, können Sie als root ausführen
+
+aptitude install dhcp-client
+
+Konfiguration
+
+Grundlegende Konfiguration
+
+Für eine Grundkonfiguration müssen Sie die Datei /etc/network/interfaces bearbeiten, in der die Schnittstellen Ihres Computers definiert sind. Wenn Sie eth0 als Schnittstelle verwenden wollen, die beim Booten über DHCP konfiguriert werden soll, fügen Sie den eth0-Eintrag hinzu
+
+auto ens3
+
+iface ens3 inet dhcp
+
+Die verschiedenen Schlüsselwörter haben die folgende Bedeutung:
+
+auto: die Schnittstelle soll während des Bootvorgangs konfiguriert werden.
+
+inet: Die Schnittstelle verwendet TCP/IP-Netzwerke.
+
+dhcp: Die Schnittstelle kann über DHCP konfiguriert werden.
+
+Das ist alles.
+
+Um das System so zu ändern, dass es eine statische IP-Adresse verwendet (nicht dhcp), ändern Sie die Datei /etc/network/interfaces wie folgt:
+
+iface ens3 inet static
+
+Adresse 192.168.50.2
+
+Netzmaske 255.255.255.0
+
+gateway 192.168.50.1
+
+
 ______________
 # Debian Client
 
-# Interface>
+# Interface
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177217039-f3490c85-4a80-4366-8bef-a1efd9f82a48.png)
 
-# Hostname>
+# Hostname
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177217109-faf917c8-b61e-414d-bfba-2d849ae30ce2.png)
 
