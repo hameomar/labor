@@ -42,7 +42,7 @@ Zeichnen
 
 ____________________________
 
-Lizenzen:
+# Lizenzen:
 
 Für diese Version ist die Aktivierung nicht möglich
 
@@ -60,21 +60,21 @@ Für diese Version ist die Aktivierung nicht möglich
 
 ________________________
 
-R1, R2 Konfiguration:
+# R1, R2 Konfiguration:
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177217859-626a5145-9dc4-4dd7-9c27-2211246d73c8.png)
 
 
 __________________________
 
-DHCP Setup
+# DHCP Setup
 
 
 ![grafik](https://user-images.githubusercontent.com/102586033/177216754-cf8346b2-f544-4480-bebf-c6287489aedc.png)
 
 
 ______________
-Debian Client
+# Debian Client
 
 # Interface>
 
@@ -90,6 +90,7 @@ Debian Client
 ![grafik](https://user-images.githubusercontent.com/102586033/177217903-bc9eae5f-3b6a-4137-83ce-527f6c417ef4.png)
 
 
+![grafik](https://user-images.githubusercontent.com/102586033/177222830-c22aafdd-bb47-4e2c-9715-9f86e70b759b.png)
 
 ___________________
 
@@ -105,6 +106,12 @@ Es handelt sich dabei um eine Art von Netzwerkadressenübersetzung (NAT), die di
 ![grafik](https://user-images.githubusercontent.com/102586033/177218157-59b96598-d41c-4a44-b876-2d15e8541e36.png)
 
 
-![grafik](https://user-images.githubusercontent.com/102586033/177222830-c22aafdd-bb47-4e2c-9715-9f86e70b759b.png)
+
+___________________
+# Webbrowser
+
+![grafik](https://user-images.githubusercontent.com/102586033/177252870-b8d0a5a6-aca4-47ed-b1c3-194110e26e94.png)
+
+
 
 
