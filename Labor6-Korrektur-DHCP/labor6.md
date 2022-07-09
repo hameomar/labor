@@ -15,4 +15,11 @@ DHCP Adress Pool: Ein Netzwerkprotokoll, das es einem Server ermöglicht, einem 
  Wenn Sie DHCP in einem Netzwerk mit mehreren Segmenten verwenden möchten, müssen Sie entweder einen DHCP-Server oder einen Relay-Agenten in jedem Segment einsetzen oder sicherstellen, dass Ihr Router Bootstrap Protocol (BOOTP) Broadcasts weiterleiten kann. Das Problem mit einem DHCP-Relay besteht darin, dass die Cleints keine IP erhalten, wenn beispielsweise ein Netzwerk auf dem Weg zum Zielnetzwerk ausgefallen ist. In diesem Labor werde ich daher R2 mit R3 verbinden, und wenn ein Netzwerk 172.16.28.0/30 oder 172.16.28.4/30 ausgefallen ist, wird der andere Router die IP-Zuweisung übernehmen.
  
  
- 
+ __________
+
+![grafik](https://user-images.githubusercontent.com/102586033/178100161-37ece9eb-dbab-4749-bd2d-679556aab032.png)
+
+
+__________
+
+R1 (Core) Konfiguration:
