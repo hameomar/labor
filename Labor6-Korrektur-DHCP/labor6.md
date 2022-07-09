@@ -76,6 +76,9 @@ DAc 192.168.192.0/29  ether1                0
 
 # Zugang Zum Internet / NAT Role:
 
+Source NAT ist die Übersetzung der Quell-IP-Adresse eines Pakets, das das Juniper Networks-Gerät verlässt. Source NAT wird verwendet, um Hosts mit privaten IP-Adressen den Zugriff auf ein öffentliches Netzwerk zu ermöglichen.
+
+
 [admin@Core] > ip firewall/nat/print
 
 Flags: X - disabled, I - invalid; D - dynamic
@@ -239,6 +242,33 @@ Columns: NAME, INTERFACE, ADDRESS-POOL, LEASE-TIME
 
 
 _________________
+
+# PC1 und PC2 erhalten IP vom DHCP Server und können sich gegenseitig anpingen / google anpingen 
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/178101737-56d16cfb-e36b-45fe-a61d-5c187a47bba1.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/178101760-9c435193-6f8f-4989-8673-d0d942ba683a.png)
+
+
+
+______________________
+
+# R1 (Core ) und R2 , R3 können sich gegenseitig anpingen
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/178101953-bf1fa3b1-5b42-454d-80b2-273a61455246.png)
+
+
+![grafik](https://user-images.githubusercontent.com/102586033/178101962-40ca4107-bda4-4a09-a673-b10ed647bbd0.png)
+
+
+______________
+
+# MGMT1 wird für Managment verwendet:
+
+![grafik](https://user-images.githubusercontent.com/102586033/178101996-dfdb0848-7882-4bdb-a9be-13d2e1861fb6.png)
 
 
 
