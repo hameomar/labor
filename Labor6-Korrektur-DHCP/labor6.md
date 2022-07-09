@@ -271,4 +271,9 @@ ______________
 ![grafik](https://user-images.githubusercontent.com/102586033/178101996-dfdb0848-7882-4bdb-a9be-13d2e1861fb6.png)
 
 
+_______________
+
+Die Datei:
+
+[Labor6-Korrektur-ohne DHCP RELAY.zip](https://github.com/hameomar/labor/files/9076300/Labor6-Korrektur-ohne.DHCP.RELAY.zip)
 
