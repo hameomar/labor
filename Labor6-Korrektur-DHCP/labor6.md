@@ -22,4 +22,26 @@ DHCP Adress Pool: Ein Netzwerkprotokoll, das es einem Server ermöglicht, einem 
 
 __________
 
-R1 (Core) Konfiguration:
+# R1 (Core) Konfiguration:
+
+# Interfaces IP
+
+
+[admin@Core] > ip add print
+
+Columns: ADDRESS, NETWORK, INTERFACE
+
+ADDRESS            NETWORK        INTERFACE
+
+0 192.168.122.25/24  192.168.122.0  ether2
+
+1 172.16.28.5/30     172.16.28.4    ether4
+
+2 172.16.28.1/30     172.16.28.0    ether3
+
+3 192.168.192.1/29   192.168.192.0  ether1
+
+[admin@Core] >
+
+![grafik](https://user-images.githubusercontent.com/102586033/178100582-45d08c58-c06a-4a9a-935b-77f915eba4b1.png)
+
